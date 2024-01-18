@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FormularioSingle from "./componentes/FormularioSingle";
-// import FormularioBatch from "./componentes/FormularioBatch";
+import FormularioBatch from "./componentes/FormularioBatch";
 import { criaRegistro } from "./servicos/api-connect";
 
 function App() {
@@ -14,8 +14,10 @@ function App() {
 
   return (
     <div className="App">
-      <FormularioSingle aoAlunoCadastrado={(aluno) => aoNovoAlunoAdicionado(aluno)} />
-      {/* <FormularioBatch /> */}
+      <FormularioSingle
+        aoAlunoCadastrado={(aluno) => aoNovoAlunoAdicionado(aluno)}
+      />
+      <FormularioBatch />
     </div>
   );
 }
